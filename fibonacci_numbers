@@ -1,0 +1,52 @@
+'''Noel loves to play with Numbers . so this time , Noel challenges Vedansh to check whether given number is Fibonacci or not.
+
+Since Vedansh is poor in mathematics , help him to check whether given number is Fibonacci number or not.
+
+INPUT:
+
+first line of input contains number of Test-cases. then each line follows with a number N.
+
+OUTPUT:
+
+For each Test-case , output "YES" if number is Fibonacci else output "NO" , in new line.
+
+CONSTRAINTS:
+
+1<=T<=10
+
+1<=N<=10^70
+
+SAMPLE INPUT 
+5
+8
+10
+21
+32
+34
+SAMPLE OUTPUT 
+YES
+NO
+YES
+NO
+YES
+'''
+
+#My Solution
+
+t=int(input())
+
+def fib(n):
+    i=1
+    j=1
+    k=2
+    while(i<n and j<n and k<n):
+        i=j+k
+        j=i+k
+        k=i+j
+    if i==n or j==n or k==n:
+        print("YES")
+    else: print("NO")
+
+for i in range(t):
+    n=int(input())
+    fib(n)
